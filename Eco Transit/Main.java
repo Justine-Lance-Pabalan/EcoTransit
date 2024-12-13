@@ -30,6 +30,7 @@ public class Main {
                         System.out.print("Enter battery capacity (kWh): ");
                         double batteryCapacity = scanner.nextDouble();
                         tms.addVehicle(new ElectricVehicle(model, year, efficiency, batteryCapacity));
+                        System.err.println("\nElectric vehicle added succesfully.");
                         break;
                     case 2:
                         System.out.print("\nEnter model: ");
@@ -41,6 +42,7 @@ public class Main {
                         System.out.print("Enter emissions rate (g/km): ");
                         double emissionsRate = scanner.nextDouble();
                         tms.addVehicle(new HybridVehicle(model, year, efficiency, emissionsRate));
+                        System.err.println("\nHybrid vehicle added succesfully.");
                         break;
                     case 3:
                         tms.displayFleet();
