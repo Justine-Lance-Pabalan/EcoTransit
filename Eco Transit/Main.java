@@ -6,19 +6,20 @@ public class Main {
         TransportationManagementSystem tms = new TransportationManagementSystem();
 
         while (true) {
-            System.out.println("Choose an option:");
+            System.out.println("\nChoose an option:");
             System.out.println("1. Add Electric Vehicle");
             System.out.println("2. Add Hybrid Vehicle");
             System.out.println("3. Display Fleet");
             System.out.println("4. Display Total Emissions");
-            System.out.println("5. Exit");
+            System.out.println("5. Exit\n");
+            System.out.println("Your choice:");
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter model: ");
+                    System.out.print("\nEnter model: ");
                     String model = scanner.nextLine();
                     System.out.print("Enter year: ");
                     int year = scanner.nextInt();
@@ -29,7 +30,7 @@ public class Main {
                     tms.addVehicle(new ElectricVehicle(model, year, efficiency, batteryCapacity));
                     break;
                 case 2:
-                    System.out.print("Enter model: ");
+                    System.out.print("\nEnter model: ");
                     model = scanner.nextLine();
                     System.out.print("Enter year: ");
                     year = scanner.nextInt();
