@@ -12,11 +12,12 @@ public class Main {
                 System.out.println("2. Add Hybrid Vehicle");
                 System.out.println("3. Display Fleet");
                 System.out.println("4. Display Total Emissions");
-                System.out.println("5. Exit\n");
+                System.out.println("5. Remove a Vehicle");
+                System.out.println("6. Exit\n");
                 System.out.print("Your choice: ");
 
                 int choice = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine();
 
                 switch (choice) {
                     case 1:
@@ -51,6 +52,9 @@ public class Main {
                         tms.displayFleetEmissions();
                         break;
                     case 5:
+                        tms.removeVehicle(scanner);
+                        break;
+                    case 6:
                         System.out.println("Exiting...");
                         scanner.close();
                         return;
@@ -59,7 +63,7 @@ public class Main {
                 }
             } catch (Exception e) {
                     System.out.println("\nError: Invalid input. Please try again.");
-                    scanner.nextLine(); // Clear the input buffer
+                    scanner.nextLine();
             }
         }
     }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TransportationManagementSystem {
     private ArrayList<Vehicle> fleet;
@@ -13,9 +14,36 @@ public class TransportationManagementSystem {
     }
 
     // Remove a vehicle from the fleet by model name
-    public void removeVehicle(String model) {
-        fleet.removeIf(vehicle -> vehicle.getModel().equals(model));
+    public void removeVehicle(Scanner scanner) {
+        if (fleet.isEmpty()) {
+            System.out.println("\nThe fleet is empty. No vehicles to remove.\n");
+            return;
+        }
+
+        System.out.println("\n--- Current Fleet ---");
+        displayFleet();
+        displayFleetEmissions();
+
+        System.out.print("\nEnter the model of the vehicle you want to remove: ");
+        String model = scanner.nextLine();
+
+        boolean vehicleRemoved = fleet.removeIf(vehicle -> vehicle.getModel().equalsIgnoreCase(model));
+        if (vehicleRemoved) {
+            System.out.println("Vehicle with model '" + model + "' removed successfully.");
+        } else 
+        {
+            System.out.println("No vehicle with model '" + model + "' found in the fleet.");
+        }
     }
+
+    public boolean fleetIsEmpty() {
+        if (fleet.isEmpty()) {
+            System.out.println("\nThe fleet is empty. No vehicles to remove.\n");
+            return true;
+        }
+        return false;
+    }
+    
 
     // Display all vehicles in the fleet
     public void displayFleet() {
