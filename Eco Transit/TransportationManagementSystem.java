@@ -16,7 +16,7 @@ public class TransportationManagementSystem {
     // Remove a vehicle from the fleet by model name
     public void removeVehicle(Scanner scanner) {
         if (fleet.isEmpty()) {
-            System.out.println("\nThe fleet is empty. No vehicles to remove.\n");
+            System.out.println("\nThe fleet is empty. No vehicles to remove.");
             return;
         }
 
