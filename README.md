@@ -39,7 +39,7 @@ If you choose Option 3, the program will display all the vehicles currently in t
 If you choose Option 4, the program will calculate and display the total carbon footprint of all vehicles in the fleet. Again, if there is currently no vehicles in the fleet, it will show a prompt that there is no vehicles in the fleet.
 
 5. Remove a Vehicle
-If you choose Option 5, the program will display all the vehicles currently in the fleet, if there is no vei
+If you choose Option 5, the program will display all the vehicles currently in the fleet, if there is no vehicles in the fleet, it will show you a prompt that there is no vehicles in the prompt. Otherwise you will input the name of the vehicle you want to remove. 
 
 6. Exit
 Choosing Option 5 will exit the program.
