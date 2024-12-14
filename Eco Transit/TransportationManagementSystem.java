@@ -44,7 +44,6 @@ public class TransportationManagementSystem {
         return false;
     }
     
-
     // Display all vehicles in the fleet
     public void displayFleet() {
         System.out.println("\n--- Fleet Details ---");
